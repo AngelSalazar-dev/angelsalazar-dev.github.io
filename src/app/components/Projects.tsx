@@ -7,7 +7,7 @@ const projects = [
   {
     title: "NutriFlow",
     description:
-      "A full-stack nutrition tracking web application with user authentication (JWT), meal logging, exercise tracking, water intake, AI chat integration, and a subscription system. Deployed on Vercel with TiDB Cloud (MySQL) database.",
+      "A full-stack nutrition & wellness platform with 18 database tables, JWT authentication, meal logging, exercise tracking, water intake, AI chat integration, subscription system with founder accounts, and XP/gamification. Built with Next.js 16, deployed on Vercel with TiDB Cloud (MySQL).",
     tech: ["Next.js", "TypeScript", "MySQL", "JWT Auth", "Tailwind CSS", "TiDB"],
     github: "https://github.com/AngelSalazar-dev/NutriFlow_official",
     live: "https://nutriflow-official.vercel.app",
