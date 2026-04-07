@@ -51,6 +51,7 @@ export default function About() {
 
         <FadeIn delay={0.4}>
           <p className="text-muted-foreground leading-relaxed">
+            I&apos;m 20 years old, born in Culiacán and currently based in Tijuana.
             Currently studying <span className="text-foreground font-medium">Software Engineering at UVEG</span>,
             combining my academic training with real-world projects. When I&apos;m not
             coding, I study official documentation, experiment with new technologies,

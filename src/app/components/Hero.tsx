@@ -64,7 +64,7 @@ export default function Hero() {
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-3.32a8 8 0 0 0 5.29-1.38l-1.71-1.71a5.56 5.56 0 0 1-2.18.35 5.32 5.32 0 0 0-3.4-.72V22"/><path d="M9 22V12.32a3.32 3.32 0 0 0-3.31 3.32V22"/><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h1.09a6.9 6.9 0 0 1 .36-2H9a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h2.09a6.9 6.9 0 0 1 .36 2H19a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><path d="M10.9 14.6c-.7-.2-1.4-.6-1.9-1.1-.5-.5-.9-1.2-1.1-1.9"/></svg>
           </a>
           <a
-            href="https://linkedin.com/in/angel-salazar"
+            href="https://www.linkedin.com/in/%C3%A1ngel-salazar-undefined-47567a320/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"

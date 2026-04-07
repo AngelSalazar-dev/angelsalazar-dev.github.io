@@ -62,7 +62,7 @@ export default function Contact() {
               <span className="text-sm">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/angel-salazar"
+              href="https://www.linkedin.com/in/%C3%A1ngel-salazar-undefined-47567a320/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -72,7 +72,7 @@ export default function Contact() {
             </a>
             <span className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-4 h-4" />
-              <span className="text-sm">Guanajuato, Mexico</span>
+              <span className="text-sm">Tijuana, Mexico</span>
             </span>
           </div>
         </FadeIn>
