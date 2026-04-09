@@ -2,45 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ExternalLinkIcon } from "lucide-react";
-
-const projects = [
-  {
-    title: "NutriFlow",
-    description:
-      "Plataforma completa de nutrición y bienestar con 18 tablas de base de datos, autenticación JWT, registro de comidas, seguimiento de ejercicios, consumo de agua, integración con chat de IA, sistema de suscripción y gamificación XP. Construido con Next.js 15, desplegado en Vercel con TiDB Cloud (MySQL).",
-    tech: ["Next.js", "TypeScript", "MySQL", "JWT Auth", "Tailwind CSS", "TiDB"],
-    github: "https://github.com/AngelSalazar-dev/NutriFlow_official",
-    live: "https://nutriflow-official.vercel.app",
-    featured: true,
-  },
-  {
-    title: "WonderAI",
-    description:
-      "Aplicación web impulsada por IA que aprovecha APIs modernas para ofrecer funciones inteligentes. Diseñada para escalabilidad y una experiencia de usuario limpia.",
-    tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS"],
-    github: "https://github.com/AngelSalazar-dev/WonderAI",
-    live: "#",
-    featured: false,
-  },
-  {
-    title: "Sitio Web Portafolio",
-    description:
-      "Este mismo sitio — construido con Next.js, TypeScript y Tailwind CSS. Diseño limpio y profesional con soporte para modo oscuro, animaciones suaves y partículas interactivas.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "tsParticles"],
-    github: "https://github.com/AngelSalazar-dev/angelsalazar.github.io",
-    live: "#",
-    featured: false,
-  },
-  {
-    title: "Proyecto Scratch CS50",
-    description:
-      "Mi primer proyecto de programación del curso CS50 de Harvard — una introducción al pensamiento computacional y la resolución de problemas.",
-    tech: ["Scratch", "CS50", "Algoritmos"],
-    github: "https://github.com/AngelSalazar-dev/Problem-Set-0-Angel-Salazar",
-    live: "#",
-    featured: false,
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/translations";
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -54,15 +17,158 @@ const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 );
 
 export default function Projects() {
+  const { lang } = useLanguage();
+
+  const projectsData: Record<string, { title: string; desc: string; tech: string[]; github: string; live: string; featured: boolean }[]> = {
+    es: [
+      {
+        title: "NutriFlow",
+        desc: "Plataforma completa de nutrición y bienestar con 18 tablas de base de datos, autenticación JWT, registro de comidas, seguimiento de ejercicios, consumo de agua, integración con chat de IA, sistema de suscripción y gamificación XP. Construido con Next.js 15, desplegado en Vercel con TiDB Cloud (MySQL).",
+        tech: ["Next.js", "TypeScript", "MySQL", "JWT Auth", "Tailwind CSS", "TiDB"],
+        github: "https://github.com/AngelSalazar-dev/NutriFlow_official",
+        live: "https://nutriflow-official.vercel.app",
+        featured: true,
+      },
+      {
+        title: "WonderAI",
+        desc: "Aplicación web impulsada por IA que aprovecha APIs modernas para ofrecer funciones inteligentes. Diseñada para escalabilidad y una experiencia de usuario limpia.",
+        tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS"],
+        github: "https://github.com/AngelSalazar-dev/WonderAI",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Sitio Web Portafolio",
+        desc: "Este mismo sitio — construido con Next.js, TypeScript y Tailwind CSS. Diseño limpio y profesional con soporte para modo oscuro, animaciones suaves y partículas interactivas.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/AngelSalazar-dev/angelsalazar.github.io",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Proyecto Scratch CS50",
+        desc: "Mi primer proyecto de programación del curso CS50 de Harvard — una introducción al pensamiento computacional y la resolución de problemas.",
+        tech: ["Scratch", "CS50", "Algoritmos"],
+        github: "https://github.com/AngelSalazar-dev/Problem-Set-0-Angel-Salazar",
+        live: "#",
+        featured: false,
+      },
+    ],
+    en: [
+      {
+        title: "NutriFlow",
+        desc: "Complete nutrition and wellness platform with 18 database tables, JWT authentication, meal tracking, exercise monitoring, water intake, AI chat integration, subscription system and XP gamification. Built with Next.js 15, deployed on Vercel with TiDB Cloud (MySQL).",
+        tech: ["Next.js", "TypeScript", "MySQL", "JWT Auth", "Tailwind CSS", "TiDB"],
+        github: "https://github.com/AngelSalazar-dev/NutriFlow_official",
+        live: "https://nutriflow-official.vercel.app",
+        featured: true,
+      },
+      {
+        title: "WonderAI",
+        desc: "AI-powered web application leveraging modern APIs to deliver intelligent features. Designed for scalability and a clean user experience.",
+        tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS"],
+        github: "https://github.com/AngelSalazar-dev/WonderAI",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Portfolio Website",
+        desc: "This very site — built with Next.js, TypeScript and Tailwind CSS. Clean, professional design with dark mode support, smooth animations and interactive particles.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/AngelSalazar-dev/angelsalazar.github.io",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "CS50 Scratch Project",
+        desc: "My first programming project from Harvard's CS50 course — an introduction to computational thinking and problem solving.",
+        tech: ["Scratch", "CS50", "Algorithms"],
+        github: "https://github.com/AngelSalazar-dev/Problem-Set-0-Angel-Salazar",
+        live: "#",
+        featured: false,
+      },
+    ],
+    pt: [
+      {
+        title: "NutriFlow",
+        desc: "Plataforma completa de nutrição e bem-estar com 18 tabelas de banco de dados, autenticação JWT, registro de refeições, acompanhamento de exercícios, consumo de água, integração com chat de IA, sistema de assinaturas e gamificação XP.",
+        tech: ["Next.js", "TypeScript", "MySQL", "JWT Auth", "Tailwind CSS", "TiDB"],
+        github: "https://github.com/AngelSalazar-dev/NutriFlow_official",
+        live: "https://nutriflow-official.vercel.app",
+        featured: true,
+      },
+      {
+        title: "WonderAI",
+        desc: "Aplicação web impulsionada por IA que aproveita APIs modernas para oferecer funções inteligentes. Projetada para escalabilidade e uma experiência de usuário limpa.",
+        tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS"],
+        github: "https://github.com/AngelSalazar-dev/WonderAI",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Site Portfólio",
+        desc: "Este mesmo site — construído com Next.js, TypeScript e Tailwind CSS. Design limpo e profissional com suporte para modo escuro, animações suaves e partículas interativas.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/AngelSalazar-dev/angelsalazar.github.io",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Projeto Scratch CS50",
+        desc: "Meu primeiro projeto de programação do curso CS50 de Harvard — uma introdução ao pensamento computacional e resolução de problemas.",
+        tech: ["Scratch", "CS50", "Algoritmos"],
+        github: "https://github.com/AngelSalazar-dev/Problem-Set-0-Angel-Salazar",
+        live: "#",
+        featured: false,
+      },
+    ],
+    fr: [
+      {
+        title: "NutriFlow",
+        desc: "Plateforme complète de nutrition et bien-être avec 18 tables de base de données, authentification JWT, suivi des repas, exercices, consommation d'eau, intégration chat IA, système d'abonnement et gamification XP.",
+        tech: ["Next.js", "TypeScript", "MySQL", "JWT Auth", "Tailwind CSS", "TiDB"],
+        github: "https://github.com/AngelSalazar-dev/NutriFlow_official",
+        live: "https://nutriflow-official.vercel.app",
+        featured: true,
+      },
+      {
+        title: "WonderAI",
+        desc: "Application web alimentée par l'IA exploitant des APIs modernes pour offrir des fonctionnalités intelligentes. Conçue pour l'évolutivité et une expérience utilisateur propre.",
+        tech: ["Next.js", "TypeScript", "AI APIs", "Tailwind CSS"],
+        github: "https://github.com/AngelSalazar-dev/WonderAI",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Site Portfolio",
+        desc: "Ce site même — construit avec Next.js, TypeScript et Tailwind CSS. Design propre et professionnel avec support du mode sombre, animations fluides et particules interactives.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/AngelSalazar-dev/angelsalazar.github.io",
+        live: "#",
+        featured: false,
+      },
+      {
+        title: "Projet Scratch CS50",
+        desc: "Mon premier projet de programmation du cours CS50 de Harvard — une introduction à la pensée computationnelle et à la résolution de problèmes.",
+        tech: ["Scratch", "CS50", "Algorithmes"],
+        github: "https://github.com/AngelSalazar-dev/Problem-Set-0-Angel-Salazar",
+        live: "#",
+        featured: false,
+      },
+    ],
+  };
+
+  const projects = projectsData[lang] || projectsData.es;
+
   return (
     <section id="projects" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <div className="mb-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium mb-4">Portafolio</p>
-            <h2 className="text-4xl md:text-5xl font-light text-foreground">
-              Proyectos <span className="font-bold">destacados</span>
-            </h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium mb-4">{t(lang, "projects.label")}</p>
+            <h2 className="text-4xl md:text-5xl font-light text-foreground" dangerouslySetInnerHTML={{
+              __html: t(lang, "projects.title").replace("<bold>", '<span class="font-bold">').replace("</bold>", "</span>")
+            }} />
             <div className="h-px w-16 bg-gold/50 mt-6" />
           </div>
         </FadeIn>
@@ -80,7 +186,7 @@ export default function Projects() {
                       {project.title}
                     </h3>
                     {project.featured && (
-                      <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-medium">Proyecto Principal</span>
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-medium">{t(lang, "projects.featured")}</span>
                     )}
                   </div>
                   <div className="flex items-center gap-3">
@@ -108,16 +214,16 @@ export default function Projects() {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-8 text-sm font-light">
-                  {project.description}
+                  {project.desc}
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-6 border-t border-border">
-                  {project.tech.map((t) => (
+                  {project.tech.map((tech) => (
                     <span
-                      key={t}
+                      key={tech}
                       className="text-[10px] px-3 py-1 border border-border text-muted-foreground uppercase tracking-wider"
                     >
-                      {t}
+                      {tech}
                     </span>
                   ))}
                 </div>

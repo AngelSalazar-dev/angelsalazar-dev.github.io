@@ -27,9 +27,9 @@ export default function Contact() {
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium mb-4">
               {t(lang, "contact.label")}
             </p>
-            <h2 className="text-4xl md:text-5xl font-light text-foreground">
-              {t(lang, "contact.title").replace("<bold>", '<span className="font-bold">').replace("</bold>", "</span>")}
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-light text-foreground" dangerouslySetInnerHTML={{
+              __html: t(lang, "contact.title").replace("<bold>", '<span class="font-bold">').replace("</bold>", "</span>")
+            }} />
             <div className="h-px w-16 bg-gold/50 mt-6" />
           </div>
         </FadeIn>

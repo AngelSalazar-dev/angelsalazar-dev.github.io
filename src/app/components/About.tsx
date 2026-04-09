@@ -59,7 +59,7 @@ export default function About() {
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
                 <p>{t(lang, "about.p1")}</p>
                 <p>{t(lang, "about.p2").replace("{tech}", 'Next.js & TypeScript')}</p>
-                <p>{t(lang, "about.p3").replace("{career}", t(lang, "es") === "es" ? "Ingeniería de Software en la UVEG" : lang === "en" ? "Software Engineering at UVEG" : lang === "pt" ? "Engenharia de Software na UVEG" : "Génie Logiciel à l'UVEG")}</p>
+                <p>{t(lang, "about.p3").replace("{career}", t(lang, "about.career"))}</p>
 
                 <div className="pt-10 grid grid-cols-2 gap-6">
                   <div className="pb-6 border-b border-border">
