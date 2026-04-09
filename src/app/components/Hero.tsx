@@ -106,6 +106,10 @@ export default function Hero() {
               label: "Email",
               href: "mailto:angelsalazar.dev@gmail.com",
             },
+            {
+              label: "WhatsApp",
+              href: "https://wa.me/526675748905",
+            },
           ].map((link) => (
             <a
               key={link.label}
