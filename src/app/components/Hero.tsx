@@ -112,7 +112,7 @@ export default function Hero() {
             },
             {
               label: "WhatsApp",
-              href: `https://wa.me/${WHATSAPP}`,
+              href: `https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hola Ángel, vi tu portafolio.')}`,
             },
           ].map((link) => (
             <a

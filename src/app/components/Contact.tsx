@@ -80,7 +80,7 @@ export default function Contact() {
           {/* WhatsApp */}
           <FadeIn delay={0.5}>
             <a
-              href={`https://wa.me/${WHATSAPP}`}
+              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hola Ángel, vi tu portafolio y me gustaría platicar contigo.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-start gap-6 p-8 border border-border bg-card hover:border-gold/30 transition-all duration-300"
@@ -101,7 +101,9 @@ export default function Contact() {
 
         <FadeIn delay={0.6}>
           <a
-            href={`mailto:${EMAIL}`}
+            href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hola Ángel, vi tu portafolio y me gustaría platicar contigo.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-14 items-center px-12 bg-foreground text-background font-medium tracking-wide hover:bg-gold hover:text-black transition-all duration-300"
           >
             <MessageSquare className="w-4 h-4 mr-3" />
