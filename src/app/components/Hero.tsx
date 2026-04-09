@@ -2,8 +2,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { t, EMAIL, WHATSAPP } from "@/i18n/translations";
 
 export default function Hero() {
+  const { lang } = useLanguage();
+
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
       {/* Subtle accent line */}
@@ -17,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-[10px] tracking-[0.4em] uppercase text-gold font-medium mb-8"
         >
-          Portafolio Profesional
+          {t(lang, "hero.label")}
         </motion.p>
 
         {/* Name */}
@@ -27,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl sm:text-5xl font-light text-foreground mb-4 leading-tight"
         >
-          Ángel Salazar
+          {t(lang, "hero.name")}
         </motion.h1>
 
         {/* Divider */}
@@ -49,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-sm tracking-[0.25em] uppercase text-muted-foreground mb-6 font-light"
         >
-          Desarrollador Full Stack
+          {t(lang, "hero.role")}
         </motion.p>
 
         {/* Description */}
@@ -59,10 +63,10 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-muted-foreground max-w-md mx-auto text-sm leading-relaxed font-light mb-12"
         >
-          Experiencias digitales con{" "}
-          <span className="text-foreground font-normal">Next.js</span>,
-          <span className="text-foreground font-normal"> TypeScript</span> y{" "}
-          <span className="text-foreground font-normal">código limpio</span>.
+          {t(lang, "hero.description")
+            .replace("{desc1}", t(lang, "hero.desc1"))
+            .replace("{desc2}", t(lang, "hero.desc2"))
+            .replace("{desc3}", t(lang, "hero.desc3"))}
         </motion.p>
 
         {/* CTAs */}
@@ -76,13 +80,13 @@ export default function Hero() {
             href="#projects"
             className="px-8 py-3 bg-foreground text-background text-[10px] font-medium tracking-[0.15em] uppercase hover:bg-gold hover:text-black transition-all duration-300"
           >
-            Ver Proyectos
+            {t(lang, "hero.cta_projects")}
           </a>
           <a
             href="#contact"
             className="px-8 py-3 border border-border text-[10px] font-medium tracking-[0.15em] uppercase text-muted-foreground hover:border-gold/50 hover:text-foreground transition-all duration-300"
           >
-            Contactar
+            {t(lang, "hero.cta_contact")}
           </a>
         </motion.div>
 
@@ -104,18 +108,18 @@ export default function Hero() {
             },
             {
               label: "Email",
-              href: "mailto:angelsalazar.dev@gmail.com",
+              href: `mailto:${EMAIL}`,
             },
             {
               label: "WhatsApp",
-              href: "https://wa.me/526675748905",
+              href: `https://wa.me/${WHATSAPP}`,
             },
           ].map((link) => (
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="text-muted-foreground/50 text-[10px] tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300"
             >
               {link.label}
@@ -131,7 +135,7 @@ export default function Hero() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground/40">
-            Descubrir
+            {t(lang, "hero.scroll")}
           </span>
           <ArrowDown className="w-3 h-3 text-muted-foreground/40" />
         </motion.div>

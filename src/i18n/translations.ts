@@ -1,0 +1,278 @@
+export type Language = "es" | "en" | "pt" | "fr";
+
+export const languages: { code: Language; label: string; flag: string }[] = [
+  { code: "es", label: "ES", flag: "🇲🇽" },
+  { code: "en", label: "EN", flag: "🇺🇸" },
+  { code: "pt", label: "PT", flag: "🇧🇷" },
+  { code: "fr", label: "FR", flag: "🇫🇷" },
+];
+
+export const translations: Record<Language, Record<string, string>> = {
+  es: {
+    // Navbar
+    "nav.about": "Sobre Mí",
+    "nav.skills": "Habilidades",
+    "nav.ai": "IA",
+    "nav.projects": "Proyectos",
+    "nav.education": "Estudios",
+    "nav.contact": "Contacto",
+
+    // Hero
+    "hero.label": "Portafolio Profesional",
+    "hero.name": "Ángel Salazar",
+    "hero.role": "Desarrollador Full Stack",
+    "hero.desc1": "Next.js",
+    "hero.desc2": "TypeScript",
+    "hero.desc3": "código limpio",
+    "hero.description": "Experiencias digitales con {desc1}, {desc2} y {desc3}.",
+    "hero.cta_projects": "Ver Proyectos",
+    "hero.cta_contact": "Contactar",
+    "hero.scroll": "Descubrir",
+
+    // About
+    "about.label": "Sobre Mí",
+    "about.title": "Creando soluciones <bold>digitales</bold>",
+    "about.p1": 'Soy un desarrollador apasionado por entender el "por qué" detrás del código. Lo que comenzó como una curiosidad sobre cómo funcionaban los sitios web se convirtió rápidamente en una carrera dedicada a construir soluciones robustas.',
+    "about.p2": "Me especializo en el ecosistema de {tech}. Mi enfoque se centra en escribir código limpio, mantenible y escalable, utilizando siempre las mejores prácticas de la industria.",
+    "about.p3": "Actualmente curso la carrera de {career}, lo que me permite combinar una base académica sólida con la ejecución de proyectos reales de alta complejidad.",
+    "about.age": "Años de edad",
+    "about.location": "Ubicación",
+
+    // Skills
+    "skills.label": "Habilidades",
+    "skills.title": "Competencias <bold>técnicas</bold>",
+
+    // AI
+    "ai.label": "Inteligencia Artificial",
+    "ai.title": "IA como <bold>herramienta</bold>",
+    "ai.description": "No solo construyo aplicaciones — uso IA para hacerlas mejores, más rápidas y más inteligentes.",
+
+    // Projects
+    "projects.label": "Portafolio",
+    "projects.title": "Proyectos <bold>destacados</bold>",
+    "projects.featured": "Proyecto Principal",
+
+    // Education
+    "education.label": "Formación",
+    "education.title": "Educación <bold>y trayectoria</bold>",
+
+    // Contact
+    "contact.label": "Contacto",
+    "contact.title": "¿Tienes un <bold>proyecto</bold> en mente?",
+    "contact.desc": "Actualmente estoy buscando mi primera oportunidad profesional como desarrollador junior. Si crees que mi perfil encaja con tu equipo o tienes una idea interesante, me encantaría charlar contigo.",
+    "contact.email": "Email",
+    "contact.whatsapp": "WhatsApp",
+    "contact.location": "Ubicación",
+    "contact.location_val": "Tijuana, BC, México",
+    "contact.cta": "Enviar Mensaje",
+
+    // Footer
+    "footer.tagline": "Diseñando el futuro, línea a línea.",
+    "footer.rights": "© {year} — Todos los derechos reservados",
+    "footer.tech": "Next.js + TypeScript + Tailwind CSS",
+  },
+  en: {
+    // Navbar
+    "nav.about": "About Me",
+    "nav.skills": "Skills",
+    "nav.ai": "AI",
+    "nav.projects": "Projects",
+    "nav.education": "Education",
+    "nav.contact": "Contact",
+
+    // Hero
+    "hero.label": "Professional Portfolio",
+    "hero.name": "Ángel Salazar",
+    "hero.role": "Full Stack Developer",
+    "hero.desc1": "Next.js",
+    "hero.desc2": "TypeScript",
+    "hero.desc3": "clean code",
+    "hero.description": "Digital experiences with {desc1}, {desc2} and {desc3}.",
+    "hero.cta_projects": "View Projects",
+    "hero.cta_contact": "Contact",
+    "hero.scroll": "Discover",
+
+    // About
+    "about.label": "About Me",
+    "about.title": "Creating <bold>digital</bold> solutions",
+    "about.p1": "I'm a developer passionate about understanding the 'why' behind the code. What started as curiosity about how websites work quickly became a career dedicated to building robust solutions.",
+    "about.p2": "I specialize in the {tech} ecosystem. My focus is on writing clean, maintainable, and scalable code, always using industry best practices.",
+    "about.p3": "I'm currently studying {career}, which allows me to combine a solid academic foundation with the execution of real-world complex projects.",
+    "about.age": "Years old",
+    "about.location": "Location",
+
+    // Skills
+    "skills.label": "Skills",
+    "skills.title": "<bold>Technical</bold> competencies",
+
+    // AI
+    "ai.label": "Artificial Intelligence",
+    "ai.title": "AI as a <bold>tool</bold>",
+    "ai.description": "I don't just build apps — I use AI to make them better, faster, and smarter.",
+
+    // Projects
+    "projects.label": "Portfolio",
+    "projects.title": "<bold>Featured</bold> projects",
+    "projects.featured": "Main Project",
+
+    // Education
+    "education.label": "Education",
+    "education.title": "Education <bold>& trajectory</bold>",
+
+    // Contact
+    "contact.label": "Contact",
+    "contact.title": "Have a <bold>project</bold> in mind?",
+    "contact.desc": "I'm currently looking for my first professional opportunity as a junior developer. If you think my profile fits your team or you have an interesting idea, I'd love to chat with you.",
+    "contact.email": "Email",
+    "contact.whatsapp": "WhatsApp",
+    "contact.location": "Location",
+    "contact.location_val": "Tijuana, BC, Mexico",
+    "contact.cta": "Send Message",
+
+    // Footer
+    "footer.tagline": "Designing the future, one line at a time.",
+    "footer.rights": "© {year} — All rights reserved",
+    "footer.tech": "Next.js + TypeScript + Tailwind CSS",
+  },
+  pt: {
+    // Navbar
+    "nav.about": "Sobre Mim",
+    "nav.skills": "Habilidades",
+    "nav.ai": "IA",
+    "nav.projects": "Projetos",
+    "nav.education": "Formação",
+    "nav.contact": "Contato",
+
+    // Hero
+    "hero.label": "Portfólio Profissional",
+    "hero.name": "Ángel Salazar",
+    "hero.role": "Desenvolvedor Full Stack",
+    "hero.desc1": "Next.js",
+    "hero.desc2": "TypeScript",
+    "hero.desc3": "código limpo",
+    "hero.description": "Experiências digitais com {desc1}, {desc2} e {desc3}.",
+    "hero.cta_projects": "Ver Projetos",
+    "hero.cta_contact": "Contatar",
+    "hero.scroll": "Descobrir",
+
+    // About
+    "about.label": "Sobre Mim",
+    "about.title": "Criando soluções <bold>digitais</bold>",
+    "about.p1": 'Sou um desenvolvedor apaixonado por entender o "porquê" por trás do código. O que começou como curiosidade sobre como funcionam os sites rapidamente se tornou uma carreira dedicada a construir soluções robustas.',
+    "about.p2": "Sou especializado no ecossistema {tech}. Meu foco é escrever código limpo, manutenível e escalável, usando sempre as melhores práticas da indústria.",
+    "about.p3": "Atualmente curso {career}, o que me permite combinar uma base acadêmica sólida com a execução de projetos reais de alta complexidade.",
+    "about.age": "Anos de idade",
+    "about.location": "Localização",
+
+    // Skills
+    "skills.label": "Habilidades",
+    "skills.title": "Competências <bold>técnicas</bold>",
+
+    // AI
+    "ai.label": "Inteligência Artificial",
+    "ai.title": "IA como <bold>ferramenta</bold>",
+    "ai.description": "Não apenas construo aplicativos — uso IA para torná-los melhores, mais rápidos e mais inteligentes.",
+
+    // Projects
+    "projects.label": "Portfólio",
+    "projects.title": "Projetos <bold>destacados</bold>",
+    "projects.featured": "Projeto Principal",
+
+    // Education
+    "education.label": "Formação",
+    "education.title": "Educação <bold>e trajetória</bold>",
+
+    // Contact
+    "contact.label": "Contato",
+    "contact.title": "Tem um <bold>projeto</bold> em mente?",
+    "contact.desc": "Atualmente estou buscando minha primeira oportunidade profissional como desenvolvedor júnior. Se você acha que meu perfil se encaixa na sua equipe ou tem uma ideia interessante, adoraria conversar com você.",
+    "contact.email": "Email",
+    "contact.whatsapp": "WhatsApp",
+    "contact.location": "Localização",
+    "contact.location_val": "Tijuana, BC, México",
+    "contact.cta": "Enviar Mensagem",
+
+    // Footer
+    "footer.tagline": "Projetando o futuro, linha por linha.",
+    "footer.rights": "© {year} — Todos os direitos reservados",
+    "footer.tech": "Next.js + TypeScript + Tailwind CSS",
+  },
+  fr: {
+    // Navbar
+    "nav.about": "À Propos",
+    "nav.skills": "Compétences",
+    "nav.ai": "IA",
+    "nav.projects": "Projets",
+    "nav.education": "Formation",
+    "nav.contact": "Contact",
+
+    // Hero
+    "hero.label": "Portfolio Professionnel",
+    "hero.name": "Ángel Salazar",
+    "hero.role": "Développeur Full Stack",
+    "hero.desc1": "Next.js",
+    "hero.desc2": "TypeScript",
+    "hero.desc3": "code propre",
+    "hero.description": "Expériences numériques avec {desc1}, {desc2} et {desc3}.",
+    "hero.cta_projects": "Voir Projets",
+    "hero.cta_contact": "Contacter",
+    "hero.scroll": "Découvrir",
+
+    // About
+    "about.label": "À Propos",
+    "about.title": "Créer des solutions <bold>numériques</bold>",
+    "about.p1": "Je suis un développeur passionné par la compréhension du 'pourquoi' derrière le code. Ce qui a commencé par une curiosité sur le fonctionnement des sites web est rapidement devenu une carrière dédiée à la construction de solutions robustes.",
+    "about.p2": "Je suis spécialisé dans l'écosystème {tech}. Mon objectif est d'écrire du code propre, maintenable et évolutif, en utilisant toujours les meilleures pratiques de l'industrie.",
+    "about.p3": "J'étudie actuellement {career}, ce qui me permet de combiner une base académique solide avec l'exécution de projets réels de haute complexité.",
+    "about.age": "Ans",
+    "about.location": "Localisation",
+
+    // Skills
+    "skills.label": "Compétences",
+    "skills.title": "Compétences <bold>techniques</bold>",
+
+    // AI
+    "ai.label": "Intelligence Artificielle",
+    "ai.title": "L'IA comme <bold>outil</bold>",
+    "ai.description": "Je ne me contente pas de construire des applications — j'utilise l'IA pour les rendre meilleures, plus rapides et plus intelligentes.",
+
+    // Projects
+    "projects.label": "Portfolio",
+    "projects.title": "Projets <bold>en vedette</bold>",
+    "projects.featured": "Projet Principal",
+
+    // Education
+    "education.label": "Formation",
+    "education.title": "Éducation <bold>& parcours</bold>",
+
+    // Contact
+    "contact.label": "Contact",
+    "contact.title": "Vous avez un <bold>projet</bold> en tête?",
+    "contact.desc": "Je recherche actuellement ma première opportunité professionnelle en tant que développeur junior. Si vous pensez que mon profil correspond à votre équipe ou que vous avez une idée intéressante, j'aimerais discuter avec vous.",
+    "contact.email": "Email",
+    "contact.whatsapp": "WhatsApp",
+    "contact.location": "Localisation",
+    "contact.location_val": "Tijuana, BC, Mexique",
+    "contact.cta": "Envoyer Message",
+
+    // Footer
+    "footer.tagline": "Concevoir l'avenir, ligne par ligne.",
+    "footer.rights": "© {year} — Tous droits réservés",
+    "footer.tech": "Next.js + TypeScript + Tailwind CSS",
+  },
+};
+
+export const EMAIL = "angeluqui2017@gmail.com";
+export const WHATSAPP = "526675748905";
+
+export function t(lang: Language, key: string): string {
+  return translations[lang][key] || key;
+}
+
+export function tReplace(lang: Language, key: string, vars: Record<string, string>): string {
+  let str = translations[lang][key] || key;
+  Object.entries(vars).forEach(([k, v]) => {
+    str = str.replace(`{${k}}`, v);
+  });
+  return str;
+}

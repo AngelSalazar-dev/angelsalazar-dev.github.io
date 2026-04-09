@@ -1,4 +1,11 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+import { t, EMAIL, WHATSAPP } from "@/i18n/translations";
+
 export default function Footer() {
+  const { lang } = useLanguage();
+
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -7,7 +14,7 @@ export default function Footer() {
             angel<span className="text-gold">.</span>salazar
           </p>
           <p className="text-xs text-muted-foreground mt-1 font-light">
-            Diseñando el futuro, línea a línea.
+            {t(lang, "footer.tagline")}
           </p>
         </div>
 
@@ -32,14 +39,14 @@ export default function Footer() {
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
           <a
-            href="mailto:angelsalazar.dev@gmail.com"
+            href={`mailto:${EMAIL}`}
             className="text-muted-foreground/50 hover:text-gold transition-colors duration-300"
             aria-label="Email"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </a>
           <a
-            href="https://wa.me/526675748905"
+            href={`https://wa.me/${WHATSAPP}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground/50 hover:text-gold transition-colors duration-300"
@@ -51,10 +58,10 @@ export default function Footer() {
 
         <div className="text-center md:text-right">
           <p className="text-xs text-muted-foreground font-light">
-            © {new Date().getFullYear()} — Todos los derechos reservados
+            {t(lang, "footer.rights").replace("{year}", String(new Date().getFullYear()))}
           </p>
           <p className="text-[10px] text-muted-foreground mt-2 font-mono uppercase tracking-wider">
-            Next.js + TypeScript + Tailwind CSS
+            {t(lang, "footer.tech")}
           </p>
         </div>
       </div>
