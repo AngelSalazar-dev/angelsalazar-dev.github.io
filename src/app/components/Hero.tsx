@@ -5,88 +5,131 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-3xl text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className="text-accent font-medium mb-4 tracking-wide">
-            Hello, I&apos;m
-          </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
-            Ángel Salazar
-          </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-6">
-            Student & Junior Developer.
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-            Passionate about full-stack development, clean architecture, and turning
-            ideas into functional digital experiences. Currently building apps with
-            Next.js, TypeScript, and modern web technologies.
-          </p>
-        </motion.div>
+    <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+      {/* Subtle accent line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-gold/40 to-transparent" />
 
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
+      <div className="max-w-4xl text-center relative z-10">
+        {/* Small label */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-[10px] tracking-[0.4em] uppercase text-gold font-medium mb-8"
+        >
+          Portafolio Profesional
+        </motion.p>
+
+        {/* Name */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-4xl sm:text-5xl font-light text-foreground mb-4 leading-tight"
+        >
+          Ángel Salazar
+        </motion.h1>
+
+        {/* Divider */}
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0 }}
+          animate={{ opacity: 1, scaleX: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex items-center justify-center gap-3 mb-6"
+        >
+          <div className="w-8 h-px bg-gold/40" />
+          <div className="w-1.5 h-1.5 rounded-full bg-gold/60" />
+          <div className="w-8 h-px bg-gold/40" />
+        </motion.div>
+
+        {/* Role */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-sm tracking-[0.25em] uppercase text-muted-foreground mb-6 font-light"
+        >
+          Desarrollador Full Stack
+        </motion.p>
+
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-muted-foreground max-w-md mx-auto text-sm leading-relaxed font-light mb-12"
+        >
+          Experiencias digitales con{" "}
+          <span className="text-foreground font-normal">Next.js</span>,
+          <span className="text-foreground font-normal"> TypeScript</span> y{" "}
+          <span className="text-foreground font-normal">código limpio</span>.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <a
             href="#projects"
-            className="px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+            className="px-8 py-3 bg-foreground text-background text-[10px] font-medium tracking-[0.15em] uppercase hover:bg-gold hover:text-black transition-all duration-300"
           >
-            View My Work
+            Ver Proyectos
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 border border-border rounded-lg font-medium text-foreground hover:bg-muted transition-colors"
+            className="px-8 py-3 border border-border text-[10px] font-medium tracking-[0.15em] uppercase text-muted-foreground hover:border-gold/50 hover:text-foreground transition-all duration-300"
           >
-            Get In Touch
+            Contactar
           </a>
         </motion.div>
 
+        {/* Social Links */}
         <motion.div
-          className="flex items-center justify-center gap-4 mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+          className="flex items-center justify-center gap-8 mb-16"
         >
-          <a
-            href="https://github.com/AngelSalazar-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-            aria-label="GitHub"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-3.32a8 8 0 0 0 5.29-1.38l-1.71-1.71a5.56 5.56 0 0 1-2.18.35 5.32 5.32 0 0 0-3.4-.72V22"/><path d="M9 22V12.32a3.32 3.32 0 0 0-3.31 3.32V22"/><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h1.09a6.9 6.9 0 0 1 .36-2H9a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h2.09a6.9 6.9 0 0 1 .36 2H19a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><path d="M10.9 14.6c-.7-.2-1.4-.6-1.9-1.1-.5-.5-.9-1.2-1.1-1.9"/></svg>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/%C3%A1ngel-salazar-undefined-47567a320/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-            aria-label="LinkedIn"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
+          {[
+            {
+              label: "GitHub",
+              href: "https://github.com/AngelSalazar-dev",
+            },
+            {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/angel-salazar-dev/",
+            },
+            {
+              label: "Email",
+              href: "mailto:angelsalazar.dev@gmail.com",
+            },
+          ].map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground/50 text-[10px] tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300"
+            >
+              {link.label}
+            </a>
+          ))}
         </motion.div>
 
+        {/* Scroll indicator */}
         <motion.div
-          className="mt-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+          className="flex flex-col items-center gap-2"
         >
-          <a
-            href="#about"
-            className="inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Scroll down"
-          >
-            <ArrowDown className="w-5 h-5 animate-bounce" />
-          </a>
+          <span className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground/40">
+            Descubrir
+          </span>
+          <ArrowDown className="w-3 h-3 text-muted-foreground/40" />
         </motion.div>
       </div>
     </section>

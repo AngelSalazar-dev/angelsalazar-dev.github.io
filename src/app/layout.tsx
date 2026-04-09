@@ -1,10 +1,29 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
-  title: "Ángel Salazar | Junior Developer",
-  description: "Portfolio of Ángel Salazar — a junior developer passionate about building clean, functional web applications. Showcasing projects like NutriFlow and more.",
+  title: "Ángel Salazar | Desarrollador Full Stack",
+  description: "Desarrollador Full Stack especializado en Next.js, TypeScript y arquitecturas limpias. Creando experiencias digitales desde Tijuana, México.",
+  openGraph: {
+    title: "Ángel Salazar | Desarrollador Full Stack",
+    description: "Experiencias digitales con Next.js, TypeScript y código limpio.",
+    url: "https://angelsalazar.dev",
+    siteName: "Ángel Salazar Portfolio",
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ángel Salazar | Desarrollador Full Stack",
+    description: "Experiencias digitales con Next.js, TypeScript y código limpio.",
+  },
 };
 
 export default function RootLayout({
@@ -13,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased">
+    <html lang="es" suppressHydrationWarning className="scroll-smooth">
+      <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

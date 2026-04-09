@@ -10,25 +10,51 @@ import {
   Database,
   GitBranch,
   Terminal,
+  Layers,
+  Cpu,
+  Globe,
+  Settings
 } from "lucide-react";
 
-const skills = [
-  { name: "HTML5", icon: Code2, level: "Intermediate" },
-  { name: "CSS3 / Tailwind", icon: Palette, level: "Intermediate" },
-  { name: "TypeScript", icon: Braces, level: "Intermediate" },
-  { name: "Next.js", icon: Atom, level: "Intermediate" },
-  { name: "Node.js", icon: Server, level: "Intermediate" },
-  { name: "MySQL / TiDB", icon: Database, level: "Intermediate" },
-  { name: "Git / GitHub", icon: GitBranch, level: "Intermediate" },
-  { name: "REST APIs", icon: Terminal, level: "Intermediate" },
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: Palette,
+    skills: [
+      { name: "Next.js", icon: Atom },
+      { name: "React", icon: Cpu },
+      { name: "TypeScript", icon: Braces },
+      { name: "Tailwind CSS", icon: Globe },
+    ]
+  },
+  {
+    title: "Backend",
+    icon: Server,
+    skills: [
+      { name: "Node.js", icon: Terminal },
+      { name: "MySQL / TiDB", icon: Database },
+      { name: "REST APIs", icon: Settings },
+      { name: "Auth JWT", icon: Layers },
+    ]
+  },
+  {
+    title: "Herramientas",
+    icon: Code2,
+    skills: [
+      { name: "Git / GitHub", icon: GitBranch },
+      { name: "Postman", icon: Terminal },
+      { name: "Vercel", icon: Globe },
+      { name: "Linux Bash", icon: Terminal },
+    ]
+  }
 ];
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.5, delay }}
+    transition={{ duration: 0.6, delay, ease: "easeOut" }}
   >
     {children}
   </motion.div>
@@ -36,20 +62,41 @@ const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-muted/50">
-      <div className="max-w-3xl mx-auto">
+    <section id="skills" className="py-32 px-6 bg-muted/20">
+      <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <h2 className="text-2xl font-bold text-foreground mb-2">Skills & Technologies</h2>
-          <div className="w-12 h-0.5 bg-accent mb-8" />
+          <div className="mb-16">
+            <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium mb-4">Habilidades</p>
+            <h2 className="text-4xl md:text-5xl font-light text-foreground">
+              Competencias <span className="font-bold">técnicas</span>
+            </h2>
+            <div className="h-px w-16 bg-gold/50 mt-6" />
+          </div>
         </FadeIn>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-          {skills.map((skill, i) => (
-            <FadeIn key={skill.name} delay={i * 0.05}>
-              <div className="group bg-card border border-border rounded-xl p-6 text-center hover:border-accent/50 transition-colors">
-                <skill.icon className="w-8 h-8 mx-auto mb-3 text-muted-foreground group-hover:text-accent transition-colors" />
-                <p className="text-sm font-medium text-foreground mb-1">{skill.name}</p>
-                <p className="text-xs text-muted-foreground">{skill.level}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {skillCategories.map((category, idx) => (
+            <FadeIn key={category.title} delay={idx * 0.1}>
+              <div className="group p-8 border border-border bg-card hover:border-gold/30 transition-all duration-500">
+                <div className="flex items-center gap-4 mb-8 pb-6 border-b border-border">
+                  <div className="p-3 bg-muted/50 text-foreground">
+                    <category.icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-sm uppercase tracking-[0.2em] font-medium text-foreground">{category.title}</h3>
+                </div>
+
+                <div className="space-y-4">
+                  {category.skills.map((skill, i) => (
+                    <motion.div
+                      key={skill.name}
+                      whileHover={{ x: 4 }}
+                      className="flex items-center gap-3 py-2"
+                    >
+                      <skill.icon className="w-4 h-4 text-gold" />
+                      <span className="text-sm font-light text-muted-foreground">{skill.name}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </FadeIn>
           ))}
