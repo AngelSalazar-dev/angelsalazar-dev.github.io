@@ -34,7 +34,7 @@ export default function Projects() {
         desc: "Plataforma colaborativa diseñada para la comunidad de desarrolladores, enfocada en el aprendizaje conjunto, el intercambio de conocimientos y el crecimiento profesional.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/GroCode",
-        live: "#",
+        live: "https://grocode.vercel.app/",
         featured: true,
       },
       {
@@ -42,7 +42,7 @@ export default function Projects() {
         desc: "Sistema de gestión y seguimiento de actividades y objetivos personales. Diseñado para ayudar a los usuarios a organizar tareas, monitorear el progreso y mantener un registro estructurado de metas productivas.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/ServiceTrack",
-        live: "#",
+        live: "https://servicetrack-web.vercel.app/",
         featured: false,
       },
       {
@@ -68,7 +68,7 @@ export default function Projects() {
         desc: "Collaborative platform designed for the developer community, focused on shared learning, knowledge exchange, and professional growth.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/GroCode",
-        live: "#",
+        live: "https://grocode.vercel.app/",
         featured: true,
       },
       {
@@ -76,7 +76,7 @@ export default function Projects() {
         desc: "Personal activity and goal tracking management system. Designed to help users organize tasks, monitor progress, and maintain a structured record of productive goals.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/ServiceTrack",
-        live: "#",
+        live: "https://servicetrack-web.vercel.app/",
         featured: false,
       },
       {
@@ -102,7 +102,7 @@ export default function Projects() {
         desc: "Plataforma colaborativa projetada para a comunidade de desenvolvedores, focada no aprendizado conjunto, troca de conhecimento e crescimento profissional.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/GroCode",
-        live: "#",
+        live: "https://grocode.vercel.app/",
         featured: true,
       },
       {
@@ -110,7 +110,7 @@ export default function Projects() {
         desc: "Sistema de gestão e acompanhamento de atividades e objetivos pessoais. Projetado para ajudar os usuários a organizar tarefas e monitorar o progresso de metas produtivas.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/ServiceTrack",
-        live: "#",
+        live: "https://servicetrack-web.vercel.app/",
         featured: false,
       },
       {
@@ -136,7 +136,7 @@ export default function Projects() {
         desc: "Plateforme collaborative conçue pour la communauté des développeurs, axée sur l'apprentissage partagé, l'échange de connaissances et la croissance professionnelle.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/GroCode",
-        live: "#",
+        live: "https://grocode.vercel.app/",
         featured: true,
       },
       {
@@ -144,7 +144,7 @@ export default function Projects() {
         desc: "Système de gestion et de suivi des activités et objectifs personnels. Conçu pour aider les utilisateurs à organiser leurs tâches et à suivre leurs progrès vers des objectifs productifs.",
         tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
         github: "https://github.com/AngelSalazar-dev/ServiceTrack",
-        live: "#",
+        live: "https://servicetrack-web.vercel.app/",
         featured: false,
       },
       {
