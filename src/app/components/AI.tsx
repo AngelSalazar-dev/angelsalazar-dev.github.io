@@ -22,33 +22,33 @@ export default function AI() {
   const aiSkills = [
     {
       icon: MessageSquare,
-      titleKey: "ai.chat_title",
-      descKey: "ai.chat_desc",
+      titleKey: "chat_title",
+      descKey: "chat_desc",
     },
     {
       icon: Code2,
-      titleKey: "ai.dev_title",
-      descKey: "ai.dev_desc",
+      titleKey: "dev_title",
+      descKey: "dev_desc",
     },
     {
       icon: Brain,
-      titleKey: "ai.prompt_title",
-      descKey: "ai.prompt_desc",
+      titleKey: "prompt_title",
+      descKey: "prompt_desc",
     },
     {
       icon: Sparkles,
-      titleKey: "ai.api_title",
-      descKey: "ai.api_desc",
+      titleKey: "api_title",
+      descKey: "api_desc",
     },
     {
       icon: Zap,
-      titleKey: "ai.auto_title",
-      descKey: "ai.auto_desc",
+      titleKey: "auto_title",
+      descKey: "auto_desc",
     },
     {
       icon: Shield,
-      titleKey: "ai.ethic_title",
-      descKey: "ai.ethic_desc",
+      titleKey: "ethic_title",
+      descKey: "ethic_desc",
     },
   ];
 
